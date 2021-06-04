@@ -1,8 +1,6 @@
 package com.divergentsl.cms_springboot.service;
 
 
-import java.util.Scanner;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

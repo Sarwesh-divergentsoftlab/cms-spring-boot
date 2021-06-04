@@ -17,5 +17,14 @@
 		<button type="submit" formaction="loginadmin">Create Invoice</button>
 		<button type="submit" formaction="loginadmin">Logout</button>
 	</form>
+		<c:forEach items="${allpatient}" var="patient">
+									<tr>
+										<c:out value="${patient.name}" />
+									
+									
+									
+									</tr>
+								</c:forEach>
+	
 </body>
 </html>

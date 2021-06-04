@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.divergentsl.cms_springboot.model.LoginDoctor;
@@ -21,7 +22,7 @@ public class LoginDoctorPanel {
 	@Autowired
 	LoginDoctorService loginDoctorService;
 	
-	@GetMapping
+	@PostMapping
 	public String checkDoctor(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 		String username = req.getParameter("userId");
@@ -46,8 +47,12 @@ public class LoginDoctorPanel {
 		    }
 		    
 	}
-
-		
+	@GetMapping
+	public String showDoctorLogin()
+	{
+		return "doctor";
 	}
+		
+}
 
 

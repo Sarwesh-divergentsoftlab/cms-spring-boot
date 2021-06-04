@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<form>
+		<button type="submit" formaction="CRUDdrug/update">Update</button>
+		<button type="submit" formaction="CRUDdrug/insert">insert</button>
+		<button type="submit" formaction="CRUDdrug/show">Show</button>
+	</form>
 </body>
 </html>

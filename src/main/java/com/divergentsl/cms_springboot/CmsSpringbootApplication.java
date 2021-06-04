@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class CmsSpringbootApplication {
 
 	public static void main(String[] args) {
-	ConfigurableApplicationContext context =	 SpringApplication.run(CmsSpringbootApplication.class, args);
+	ConfigurableApplicationContext context = SpringApplication.run(CmsSpringbootApplication.class, args);
 	System.out.println("in main");
 	}
 

@@ -1,10 +1,7 @@
 package com.divergentsl.cms_springboot.model;
 import javax.persistence.Entity;
-
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.stereotype.Component;
 
 @Entity
 @Table(name = "doctor")
@@ -15,6 +12,16 @@ public class Doctor {
 				+ ", specializatio=" + specializatio + ", prescription=" + prescription + "]";
 	}
 	private String name;
+	public Doctor(String name, String doctor_id, String fees, String degree, String specializatio,
+			String prescription) {
+		super();
+		this.name = name;
+		this.doctor_id = doctor_id;
+		this.fees = fees;
+		this.degree = degree;
+		this.specializatio = specializatio;
+		this.prescription = prescription;
+	}
 	@Id
 	private String doctor_id;
 	
@@ -60,16 +67,7 @@ public class Doctor {
 	public void setPrescription(String prescription) {
 		this.prescription = prescription;
 	}
-	public Doctor(String name, String doctor_id, String fees, String degree, String specializatio,
-			String prescription) {
-		super();
-		this.name = name;
-		this.doctor_id = doctor_id;
-		this.fees = fees;
-		this.degree = degree;
-		this.specializatio = specializatio;
-		this.prescription = prescription;
-	}
+
 	public Doctor() {
 		super();
 		// TODO Auto-generated constructor stub

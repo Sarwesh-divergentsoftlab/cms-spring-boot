@@ -10,7 +10,9 @@ public class HomeController {
 	@GetMapping
 	public String showIndex()
 	{
-		return "insertform";
+		return "admin";
 	}
+	
 
 }
+

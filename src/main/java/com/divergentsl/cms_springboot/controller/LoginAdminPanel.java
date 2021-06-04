@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.divergentsl.cms_springboot.model.LoginAdmin;
@@ -19,7 +20,7 @@ public class LoginAdminPanel {
 	@Autowired
 	LoginAdminService loginAdminService;
 
-	@GetMapping()
+	@PostMapping
 	public String checkAdmin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 			
 		String username = req.getParameter("userId");
@@ -42,6 +43,12 @@ public class LoginAdminPanel {
 		return "admin";
 
 		
+	}
+	
+	@GetMapping
+	public String showAdminLogin()
+	{
+		return "admin";
 	}
 
 }

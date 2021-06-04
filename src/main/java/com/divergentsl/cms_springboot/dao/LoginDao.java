@@ -28,6 +28,7 @@ public class LoginDao implements LoginDaoI {
 		loginAdmin.getUsername();
 		loginAdmin.getPassword();
 		looginAdmin1=em.find(LoginAdmin.class, loginAdmin.getUsername());
+		System.out.println();
 //		System.out.println(loa.getUsername()+" "+loa.getPassword()+" "+loa1.getUsername()+" "+loa1.getPassword());
 		if(loginAdmin.getUsername().equals(looginAdmin1.getUsername()) && loginAdmin.getPassword().equals(looginAdmin1.getPassword()))
 		{

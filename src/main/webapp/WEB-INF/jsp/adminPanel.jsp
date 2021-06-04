@@ -8,12 +8,12 @@
 </head>
 <body>
 	admin login success
-	<form action="doctor">
-		<button type="submit" formaction="doctorOp">Doctor Manager</button>
-		<button type="submit" formaction="loginadmin">Patient Manager</button>
-		<button type="submit" formaction="loginadmin">Drug Manager</button>
-		<button type="submit" formaction="loginadmin">Labtest Manager</button>
-		<button type="submit" formaction="loginadmin">Make Appointment</button>
+	<form>
+		<button type="submit" formaction="CRUDdoctor">Doctor Manager</button>
+		<button type="submit" formaction="CRUDpatient">Patient Manager</button>
+		<button type="submit" formaction="CRUDdrug">Drug Manager</button>
+		<button type="submit" formaction="CRUDlabtest">Labtest Manager</button>
+		<button type="submit" formaction="appointmentOP">Make Appointment</button>
 		<button type="submit" formaction="loginadmin">Logout</button>
 	</form>
 </body>

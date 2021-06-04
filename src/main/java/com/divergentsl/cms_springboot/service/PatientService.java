@@ -11,6 +11,16 @@ public interface PatientService {
 	List<Patient> showPatient();
 	
 	void deletePatient(Patient patient);
-	
-	void updatePanel(Patient patient);
+
+	void updateContact(Patient patient);
+
+	void updateAppDate(Patient patient);
+
+	void updateProblem(Patient patient);
+
+	void updateWieght(Patient patient);
+
+	void updateAge(Patient patient);
+
+	void updateName(Patient patient);
 }

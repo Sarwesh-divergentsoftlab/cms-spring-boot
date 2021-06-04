@@ -5,8 +5,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TableGenerator;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
@@ -23,24 +25,21 @@ public class PatientDao implements PatientDaoI {
 
 
 	@Override
+	@Transactional
 	public void insertPatient(Patient patient) {
-		// TODO Auto-generated method stub
-		em.getTransaction().begin();
     	em.persist(patient);
-    	em.getTransaction().commit();
 	}
 
 
 
 	@Override
+	@Transactional
 	public void deletePatient(Patient patient) {
-		// TODO Auto-generated method stub
-		em.getTransaction().begin();
     	em.remove(patient);
-    	em.getTransaction().commit();
 	}
 
 	@Override
+	@Transactional
 	public List<Patient> showPatient() {
 		// TODO Auto-generated method stub
 		
@@ -51,16 +50,15 @@ public class PatientDao implements PatientDaoI {
 	}
 
 	@Override
+	@Transactional
 	public Patient findById(String id) {
 		// TODO Auto-generated method stub
 		return em.find(Patient.class, id);
 	}
 
 	@Override
+	@Transactional
 	public void update(Patient patient) {
-		
-		em.getTransaction().begin();
     	em.persist(patient);
-    	em.getTransaction().commit();
 	}
 }

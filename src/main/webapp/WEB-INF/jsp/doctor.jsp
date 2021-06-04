@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-  	<div><form action="logindoctor" method="get">
+  	<div><form action="logindoctor" method="post">
                     <table align="center">
                         <tr><td>user id</td><td><input type="text" name="userId" placeholder="your id" style="border-radius:30px"></td></tr>
                         <tr><td>password</td><td><input type="password" name="password" style="border-radius:30px" placeholder="password"></td></tr>
